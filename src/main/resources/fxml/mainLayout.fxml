@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.filemanager.controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filemanager.controller.MainController">
 
    <children>
-      <Label fx:id= "labelId" id="labelId" layoutX="136.0" layoutY="70.0" text="HELLO" />
-      <Button layoutX="171.0" layoutY="212.0" mnemonicParsing="false" text="Button" />
+      <Label id="labelId" fx:id="labelId" layoutX="498.0" layoutY="483.0" text="HELLO" />
+      <Button layoutX="335.0" layoutY="479.0" mnemonicParsing="false" text="Button" />
+      <TreeView fx:id="treeView" layoutX="26.0" layoutY="27.0" prefHeight="500.0" prefWidth="295.0" />
+      <CheckBox fx:id="chekbox" layoutX="401.0" layoutY="483.0" mnemonicParsing="false" text="CheckBox" />
+      <TableView layoutX="335.0" layoutY="27.0" prefHeight="444.0" prefWidth="559.0">
+        <columns>
+          <TableColumn prefWidth="42.0" text="Icon" />
+          <TableColumn prefWidth="87.0" text="File" />
+            <TableColumn prefWidth="138.0" text="Path" />
+            <TableColumn prefWidth="75.0" text="Size" />
+            <TableColumn prefWidth="146.0" text="Last Modified" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

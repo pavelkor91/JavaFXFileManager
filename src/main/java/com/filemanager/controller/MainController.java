@@ -24,13 +24,13 @@ public class MainController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         File[] arrayRoots = File.listRoots();
-        TreeItem<String> rootItem = new TreeItem<>("Root");
+        TreeItem<File> rootItem = new TreeItem<>();
         rootItem.setExpanded(true);
         for (File root : arrayRoots) {
-            TreeItem<String> item = new TreeItem<>(root.toString());
+            TreeItem<File> item = new TreeItem<>(root);
             rootItem.getChildren().add(item);
         }
-        TreeView<String> tree = new TreeView<String> (rootItem);
+        TreeView<File> tree = new TreeView<File> (rootItem);
         treeView.setRoot(rootItem);
         labelId.setText("asfasffsa");
         chekbox.setSelected(true);

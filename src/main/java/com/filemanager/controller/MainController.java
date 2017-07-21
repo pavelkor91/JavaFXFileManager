@@ -23,20 +23,33 @@ public class MainController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        File[] arrayRoots = File.listRoots();
-        TreeItem<File> rootItem = new TreeItem<>();
-        rootItem.setExpanded(true);
-        for (File root : arrayRoots) {
-            TreeItem<File> item = new TreeItem<>(root);
-            rootItem.getChildren().add(item);
-        }
-        TreeView<File> tree = new TreeView<File> (rootItem);
-        treeView.setRoot(rootItem);
-        labelId.setText("asfasffsa");
-        chekbox.setSelected(true);
+//        File[] arrayRoots = File.listRoots();
+//        TreeItem<File> rootItem = new TreeItem<>();
+//        rootItem.setExpanded(true);
+//        for (File root : arrayRoots) {
+//            TreeItem<File> item = new TreeItem<>(root);
+//            rootItem.getChildren().add(item);
+//        }
+//        //TreeView<File> tree = new TreeView<> (rootItem);
+//        treeView.setRoot(rootItem);
+//
+//        treeView.setOnMouseClicked(event -> {
+//            if(event.getClickCount() > 1){
+//                System.out.println(treeView.getSelectionModel().getSelectedItem());
+//                TreeItem<File> treeItem = new TreeItem<>();
+//
+//                //treeView.setCellFactory(param -> treeItem);
+//            }
+//        });
+        TreeItem<File> root = DirectoryController.createNode(new File("E:/"));
+        root.setExpanded(true);
+        treeView.setRoot(root);
+       // return treeView;
+
+//        TreeView<File> treeView2 = new TreeView<>();
+//        treeView2 = DirectoryController.buildFileSystemBrowser();
+//        treeView.
     }
-
-
 
 
 }
